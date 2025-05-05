@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>คำร้องขอ เข้า-ออก บริษัท</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f7f8;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    form {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 128, 128, 0.1);
+      border: 1px solid #c3ecef;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #329ea3;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #226b70;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #b6e3e5;
+      background-color: #f0fbfc;
+      font-size: 1em;
+      transition: border-color 0.3s;
+    }
+    input:focus, select:focus {
+      border-color: #58c2c9;
+      outline: none;
+    }
+    button {
+      background-color: #5cc7ce;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1em;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #3db4bc;
+    }
+  </style>
+</head>
+<body>
+  <form id="entryForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdiH2QPQ3jBJvj0w4yXqT4MfwyRnPWKKZ1Bcg9dyt_ve48pOA/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+    <h2>คำร้องขอ เข้า-ออก บริษัท</h2>
+
+    <label for="date">วันที่</label>
+    <input type="date" name="entry.1111111111" required>
+
+    <label for="id">รหัสพนักงาน</label>
+    <input type="number" name="entry.2222222222" required>
+
+    <label for="name">ชื่อ-สกุล</label>
+    <input type="text" name="entry.3333333333" required>
+
+    <label for="place">สถานที่ติดต่อ</label>
+    <input type="text" name="entry.4444444444" required>
+
+    <label for="type">ลักษณะงาน</label>
+    <input type="text" name="entry.5555555555" required>
+
+    <label for="outtime">เวลาออก</label>
+    <input type="time" name="entry.6666666666" required>
+
+    <label for="intime">เวลาเข้า</label>
+    <input type="time" name="entry.7777777777" required>
+
+    <label for="approver">ผู้อนุมัติ</label>
+    <select name="entry.8888888888" required>
+      <option value="">-- กรุณาเลือก --</option>
+      <option value="ภูริภัทร ขุนสาม">ภูริภัทร ขุนสาม</option>
+      <option value="พเยาว์ พานิชเจริญ">พเยาว์ พานิชเจริญ</option>
+    </select>
+
+    <button type="submit">ส่งคำร้อง</button>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { window.location.reload(); }"></iframe>
+  </form>
+
+  <script>
+    let submitted = false;
+  </script>
+</body>
+</html>
